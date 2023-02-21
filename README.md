@@ -1,4 +1,4 @@
-# simple-blog
+# the-end-of-the-leviatan
 
 
 This is a simple blog that I have been making just for fun.
