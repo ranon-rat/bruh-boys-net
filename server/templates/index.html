@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>a new world</title>
+</head>
+
+<body>
+    <h1>
+        welcome to a new world
+    </h1>
+    <p>
+        in this blog you are going to see some of my thoughts about some topics of interest
+        <br>
+        <br>
+        This is a really simple project that many people can share and contribute to.
+        <br>
+        <br>
+        Just that
+
+    </p>
+    <img src="https://i.gifer.com/X9Yh.gif">
+    <div>
+        {{range $val:=.}}
+        <p>[<a href="/post?name={{$val}}">{{$val}}</a>]</p>
+        {{end}}
+    </div>
+</body>
+
+</html>
