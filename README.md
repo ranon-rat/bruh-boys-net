@@ -1,4 +1,4 @@
-#simple-blog
+# simple-blog
 
 
 This is a simple blog that I have been making just for fun.
