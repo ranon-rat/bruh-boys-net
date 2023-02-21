@@ -10,7 +10,7 @@ import (
 )
 
 func ConnectWS() {
-	origin, _ := url.Parse("http://" + host + "/ws")
+	origin, _ := url.Parse("http://" + host)
 	u, _ := url.Parse("ws://" + host)
 	conn, err := websocket.DialConfig(&websocket.Config{
 		Origin:    origin,
