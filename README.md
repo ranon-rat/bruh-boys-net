@@ -1,4 +1,5 @@
-# the-end-of-the-leviatan
+#  bruh-boys-net
+
 
 
 This is a simple blog that I have been making just for fun.
