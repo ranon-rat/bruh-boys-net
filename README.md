@@ -21,6 +21,8 @@ Also, if you want to change the port you only need to create  a new variable in 
 
 If you want to edit a post you can do it but for seeing the changes you need to restart the service or clear the cache.
 
+Everyone with the password can post whatever he want but he will need to mantain his computer on for hosting the posts
+
 
 
 
