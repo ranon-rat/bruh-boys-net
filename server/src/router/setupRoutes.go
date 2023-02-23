@@ -6,7 +6,7 @@ import (
 	"net/http"
 	"os"
 
-	"github.com/ranon-rat/simple-blog/server/src/controller"
+	"github.com/ranon-rat/bruh-boys-net/server/src/controller"
 )
 
 func SetupRoutes() {

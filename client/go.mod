@@ -1,4 +1,4 @@
-module github.com/ranon-rat/simple-blog/client
+module github.com/ranon-rat/bruh-boys-net/client
 
 go 1.19
 

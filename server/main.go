@@ -1,7 +1,7 @@
 package main
 
 import (
-	"github.com/ranon-rat/simple-blog/server/src/router"
+	"github.com/ranon-rat/bruh-boys-net/server/src/router"
 )
 
 func main() {

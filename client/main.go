@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/ranon-rat/simple-blog/client/src"
+	"github.com/ranon-rat/bruh-boys-net/client/src"
 )
 
 func main() {

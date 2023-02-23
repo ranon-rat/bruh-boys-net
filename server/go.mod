@@ -1,4 +1,4 @@
-module github.com/ranon-rat/simple-blog/server
+module github.com/ranon-rat/bruh-boys-net/server
 
 go 1.19
 
