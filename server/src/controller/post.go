@@ -7,9 +7,11 @@ import (
 	"os"
 	"sync"
 	"text/template"
+	"strings"
 )
 
 func tmp(content string, w http.ResponseWriter) {
+
 	file, _ := os.ReadFile("templates/post.html")
 	tmpl := template.Must(template.New("a").Parse(string(file)))
 
@@ -21,6 +23,11 @@ func tmp(content string, w http.ResponseWriter) {
 
 }
 func PostTemplate(w http.ResponseWriter, r *http.Request) {
+	agent := r.Header.Get("User-Agent")
+	if strings.Contains(agent, "Mobile") {
+		fmt.Fprintf(w, "<html><body><h1>no phone fags allowed</h1></body></html>")
+		return
+	}
 	var wg sync.WaitGroup
 	name := r.URL.Query().Get("name")
 	content, exists := Posts[name]
