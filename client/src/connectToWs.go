@@ -9,7 +9,7 @@ import (
 	"golang.org/x/net/websocket"
 )
 
-func ConnectWS() {
+func ConnectWS(pass string) {
 	origin, _ := url.Parse("http://" + host)
 	u, _ := url.Parse("ws://" + host)
 	conn, err := websocket.DialConfig(&websocket.Config{
@@ -18,7 +18,7 @@ func ConnectWS() {
 		Version:   websocket.ProtocolVersionHybi13,
 		TlsConfig: nil,
 		Header: http.Header{
-			"pass": {password}, // later i will use a token btw
+			"pass": {pass}, // later i will use a token btw
 		},
 	})
 	if err != nil {
@@ -29,17 +29,18 @@ func ConnectWS() {
 }
 
 func CommunicateToServer(conn *websocket.Conn) {
-
+	reader := json.NewDecoder(conn)
+	sender := json.NewEncoder(conn)
 	for {
 		var info Protocol
-		if err := json.NewDecoder(conn).Decode(&info); err != nil {
+		if err := reader.Decode(&info); err != nil {
 			panic(err)
 		}
 		fmt.Println(info)
 		switch info.Kind {
 		case POST:
 			content, err := GetPost(info.Name)
-			json.NewEncoder(conn).Encode(Response{
+			sender.Encode(Response{
 				ID:    info.ID,
 				Kind:  info.Kind,
 				Error: err != nil,
@@ -47,7 +48,7 @@ func CommunicateToServer(conn *websocket.Conn) {
 				Post:  content})
 		case LISTOFPOSTS:
 			posts := ListOfPosts()
-			json.NewEncoder(conn).Encode(Response{
+			sender.Encode(Response{
 				ID:    0,
 				Kind:  LISTOFPOSTS,
 				Error: false,

@@ -5,7 +5,6 @@ const (
 	LISTOFPOSTS = 2
 )
 
-var password = "123" // change it when you done
 var host = "localhost:8080/ws"
 
 type Posts struct {

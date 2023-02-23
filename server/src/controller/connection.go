@@ -52,10 +52,10 @@ func CheckThePosts() {
 	}
 }
 func ReceiveInfo(c *websocket.Conn) {
-
+	reader := json.NewDecoder(c)
 	for {
 		var resp Response
-		if err := json.NewDecoder(c).Decode(&resp); err != nil {
+		if err := reader.Decode(&resp); err != nil {
 			delete(peers, c)
 			return
 		}
