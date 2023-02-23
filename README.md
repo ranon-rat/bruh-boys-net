@@ -27,4 +27,4 @@ Everyone with the password can post whatever he want but he will need to mantain
 
 
 
-
+![img](https://media.discordapp.net/attachments/907631182240436305/1078119013013524590/imagen.png?width=1920&height=400)
