@@ -1,0 +1,11 @@
+* {
+  padding: 0;
+  font-family: "IoSevka", sans-serif;
+  background: rgb(255, 253, 253);
+  scrollbar-width: none;
+}
+
+.container {
+  margin: 0 auto;
+  width: 50%;
+}

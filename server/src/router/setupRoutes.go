@@ -10,11 +10,13 @@ import (
 )
 
 func SetupRoutes() {
+	fs := http.FileServer(http.Dir("./static"))
+	http.Handle("/static/", http.StripPrefix("/static", fs))
+
 	http.HandleFunc("/ws", controller.ConnectWS)
 	http.HandleFunc("/post", controller.PostTemplate)
 	http.HandleFunc("/", controller.HomeTemplate)
-	http.Handle("/static", http.FileServer(http.Dir("./static/")))
-
+	
 	go controller.SendInfoToEveryone()
 	go controller.CheckThePosts()
 	port, _ := os.LookupEnv("PORT")
