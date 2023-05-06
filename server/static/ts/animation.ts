@@ -10,7 +10,7 @@ const randomPhrases = ["The CIA is after me",
   "psyop psyop psyop psyop", "i hate cities", "im in a watchlist", "the key for god is mathematics","you will own nothing and you will be happy","👁","👁","👁","👁","👁","👁","👁","👁","👁","👁","👁","👁"];
 canvas.height = canvas.clientHeight;
 canvas.width = canvas.clientWidth;
-const howManyImages=8
+const howManyImages=29
 let change=false;
 const ctx = canvas.getContext("2d")!;
 canvas.style.backgroundImage='url("static/images/television-static.gif")'
@@ -39,7 +39,7 @@ function animation(ctx: CanvasRenderingContext2D, canvas: HTMLCanvasElement) {
   ctx.font = "2vw sans-serif";
   if(!change){
 for(let i=0;i<howMany;i++){
-  ctx.font = "2vw sans-serif";
+  ctx.font = "2vw Fantasia";
 
   let rand=Math.floor(randomPhrases.length*Math.random())
   let phrase=randomPhrases[rand]
@@ -53,7 +53,7 @@ for(let i=0;i<howMany;i++){
 }
   }
   let move = 5;
-  ctx.font = "10vw sans-serif";
+  ctx.font = "10vw Star Wars";
   drawText(canvas.width / 2, canvas.height / 2, move, "👁 Tecnopsicosis 👁");
   ctx.fillStyle = "rgb(255,0,0)"
     
@@ -66,7 +66,7 @@ setInterval(async () => {
   requestAnimationFrame(
     animation.bind(animation, ctx, canvas)
   );
-}, 50);
+},100);
 canvas.style.backgroundPosition="center"
 canvas.style.backgroundAttachment="fixed"
 setInterval(async () => { 
@@ -80,4 +80,4 @@ setInterval(async () => {
   }
 
   change=!change;
-}, 1000);
+}, 1500);
