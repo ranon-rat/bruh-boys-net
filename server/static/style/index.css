@@ -3,11 +3,12 @@
   font-family: "IoSevka", sans-serif;
   background: rgb(255, 253, 253);
   scrollbar-width: none;
-}
-
-.container {
   margin: 0 auto;
-  width: 50%;
+  margin: 0px !important;
+}
+body{
+
+  margin: 0px !important;
 }
 
 .post_name {
@@ -15,6 +16,7 @@
 }
 
 #title {
-  font-size: 4em;
+  width: 100%;
   height: 100vh;
-}
+  background-attachment: fixed;
+  background-position: center; }
