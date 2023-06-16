@@ -28,6 +28,7 @@ func PostTemplate(w http.ResponseWriter, r *http.Request) {
 		fmt.Fprintf(w, "<html><body><h1>no phone fags allowed</h1></body></html>")
 		return
 	}
+	
 	var wg sync.WaitGroup
 	name := r.URL.Query().Get("name")
 	content, exists := Posts[name]
