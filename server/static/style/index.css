@@ -1,22 +1,22 @@
 * {
   padding: 0;
+  margin: 0;
   font-family: "IoSevka", sans-serif;
-  background: rgb(255, 253, 253);
-  scrollbar-width: none;
-  margin: 0 auto;
-  margin: 0px !important;
 }
-body{
 
-  margin: 0px !important;
+body {
+  background: rgb(255, 253, 253);
+  cursor: url("../images/testing/cursor.gif"), auto;
 }
 
 .post_name {
-  line-height: 10;
+  line-height: 1.2;
 }
 
 #title {
   width: 100%;
   height: 100vh;
-  background-attachment: fixed;
-  background-position: center; }
+  position: fixed;
+  top: 0;
+  left: 0;
+}

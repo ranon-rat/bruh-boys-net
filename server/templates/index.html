@@ -1,50 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="/static/style/index.css" />
+    <title>Bruh boys net</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" type="text/css" href="/static/style/index.css" />
-  <title>Bruh boys net</title>
-</head>
-
-<body>
-   <canvas id="title"></canvas>
-  <div class="container">
-    <div class="section">
-  
-      <p>
-        in this blog you are going to see some of my thoughts about some
-        topics of interest
-        <br />
-        <br />
-        This is a really simple project that many people can share and
-        contribute to.
-        <br />
-        <br />
-        Just that
-      </p>
-      <div class="images">
-        <img src="https://i.gifer.com/X9Yh.gif" alt="new world" />
-      </div>
-      <div class="container_post">
-        <ul>
-
-          {{range $val:=.}}
-          <div class="post_name">
-
-            <li>
-              <p><a href="/post?name={{$val}}">{{$val}}</a></p>
-            </li>
-          </div>
-
-          {{end}}
-        </ul>
-      </div>
-    </div>
-  </div>
-  <script src="/static/script/animation.js"></script>
-</body>
-
+  <body>
+    <canvas id="title"> </canvas>
+    <audio src="/static/audio/psx_lain.wav" autoplay loop></audio>
+    <script src="/static/script/animation.js"></script>
+    <script>
+      var canvas_ = document.getElementById("title");
+      canvas_.addEventListener("click", function () {
+        window.location.href = "http://localhost:8080/post?name=example.md";
+      });
+    </script>
+  </body>
 </html>
