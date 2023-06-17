@@ -63,7 +63,7 @@ function animation(ctx: CanvasRenderingContext2D, canvas: HTMLCanvasElement) {
   let move = 5;
   // i cant just put the font size without the font so i set this
   // i dont really care but you need to take that in mind
-  ctx.font = "10vw Star Wars";
+  ctx.font = "8vw Star Wars";
   drawText(canvas.width / 2, canvas.height / 2, move, "👁 Tecnopsychosis 👁");
 // this is for keeping something constant
   ctx.fillStyle = "rgb(255,0,0)"
